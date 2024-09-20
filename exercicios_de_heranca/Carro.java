@@ -1,13 +1,13 @@
 package Veiculos;
 
 public class Carro extends Veiculo{
-    private double portas;
-    public Carro(String marca, String modelo, int ano, double portas) {
+    private int portas;
+    public Carro(String marca, String modelo, int ano, int portas) {
         super(marca, modelo, ano);
         this.portas = portas;
     }
 
-    public double getPortas() {
+    public int getPortas() {
         return portas;
     }
 
@@ -15,7 +15,9 @@ public class Carro extends Veiculo{
         System.out.print("Abrindo porta malas.");
     }
 
-    public void exibirInformacoes(){
-        
+    @Override
+    public void exibirInformacoes() {
+        super.exibirInformacoes();
+        System.out.println("Número de portas: " + portas);
     }
 }
