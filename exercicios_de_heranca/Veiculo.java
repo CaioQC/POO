@@ -11,16 +11,8 @@ public class Veiculo {
         this.ano = ano;
     }
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public int getAno() {
-        return ano;
+    public void acelerar(){
+        System.out.println("Acelerando: ");
     }
 
     public void exibirInformacoes(){
