@@ -1,0 +1,41 @@
+package N2;
+
+import java.util.Scanner;
+
+public class Teste {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite a nota da AV1: ");
+        double AV1 = sc.nextDouble();
+
+        System.out.print("Digite a nota da AV2: ");
+        double AV2 = sc.nextDouble();
+
+        ProvaUCB ucb = new ProvaUCB(AV1, AV2);
+
+        if(ucb.aprovado() == true){
+            System.out.println("O aluno foi: aprovado");
+        }
+
+        else {
+            System.out.println("O aluno foi: reprovado");
+        }
+
+        System.out.print("Digite a nota da AV1: ");
+        AV1 = sc.nextDouble();
+
+        System.out.print("Digite a nota da AV2: ");
+        AV2 = sc.nextDouble();
+
+        ProvaFafifo fafifo = new ProvaFafifo(AV1, AV2);
+
+        if(fafifo.aprovado() == true){
+            System.out.println("O aluno foi: aprovado");
+        }
+
+        else {
+            System.out.println("O aluno foi: reprovado");
+        }
+    }
+}
